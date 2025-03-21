@@ -1,0 +1,7 @@
+# configs/settings.yaml
+detection_model_path: "models/yolov8n.pt"
+segmentation_config: "COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml"
+segmentation_model_path: "models/mask_rcnn_R_50_FPN_3x.pth"
+min_confidence: 0.5
+min_mask_area: 1000
+use_gpu: false
