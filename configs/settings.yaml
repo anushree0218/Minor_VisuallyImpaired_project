@@ -1,7 +1,14 @@
-# configs/settings.yaml
-detection_model_path: "models/yolov8n.pt"
-segmentation_config: "COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml"
-segmentation_model_path: "models/mask_rcnn_R_50_FPN_3x.pth"
-min_confidence: 0.5
-min_mask_area: 1000
-use_gpu: false
+camera:
+  source: 0  # Default camera source (0 for default webcam)
+
+llm:
+  api_key: "your_openai_api_key"  # Replace with your OpenAI API key
+  model: "gpt-4"  # LLM model to use
+
+tts:
+  voice: "en-US-Wavenet-D"  # Google TTS voice model
+  speed: 1.0  # Speech speed
+
+output:
+  audio_device: "default"  # Default audio output device
+  json_output_path: "output/detection_results.json"  # Path to save JSON output
