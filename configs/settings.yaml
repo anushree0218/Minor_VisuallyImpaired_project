@@ -1,7 +1,18 @@
-# configs/settings.yaml
-detection_model_path: "models/yolov8n.pt"
-segmentation_config: "COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml"
-segmentation_model_path: "models/mask_rcnn_R_50_FPN_3x.pth"
-min_confidence: 0.5
-min_mask_area: 1000
-use_gpu: false
+# Detection Model Configuration
+detection_model_type: "haar"  # Options: "haar" or "maskrcnn"
+detection_model_path: "models/yolov8n.pt"  # Path to the detection model weights
+
+# Segmentation Model Configuration
+segmentation_config: "COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml"  # Segmentation model config
+segmentation_model_path: "models/mask_rcnn_R_50_FPN_3x.pth"  # Path to the segmentation model weights
+
+# Detection and Segmentation Parameters
+min_confidence: 0.5  # Minimum confidence threshold for detection
+min_mask_area: 1000  # Minimum mask area for segmentation
+
+# Hardware Configuration
+use_gpu: false  # Set to true if using GPU
+
+# Input and Output Paths
+input_video_path: "input_videos/input_video.mp4"  # Path to the input video
+output_json_path: "output/data.json"  # Path to save the output JSON file
