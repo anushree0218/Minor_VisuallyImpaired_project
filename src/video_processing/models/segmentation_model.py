@@ -7,7 +7,7 @@ from typing import Dict, List
 class SegmentationModel:
     def __init__(self, config: dict):
         self.device = torch.device('cuda' if config['use_gpu'] and torch.cuda.is_available() else 'cpu')
-        self.model = torchvision.models.detection.maskrcnn_resnet50_fpn(pretrained=True).to(self.device)
+        self.model = torchvision.models.detection.maskrcnn_resnet50_fpn(weights='DEFAULT').to(self.device)
         self.model.eval()
         self.min_mask_area = config['min_mask_area']
         self.coco_names = [
